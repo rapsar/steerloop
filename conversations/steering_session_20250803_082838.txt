@@ -1,0 +1,72 @@
+============================================================
+ADAPTIVE FEATURE STEERING SESSION
+============================================================
+Prompt: Which US state should I visit this summer? Just respond in one word.
+Specification: Connecticut
+Model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Supervisor: gpt-4.1-mini
+------------------------------------------------------------
+Feature: Feature("New England urban landmarks and cultural institutions")
+============================================================
+
+--- Iteration 1 ---
+Steering: 0.00
+Output: Hawaii.
+Supervisor: 0.5
+
+--- Iteration 2 ---
+Steering: 0.50
+Output: Maine.
+Supervisor: 0.8
+
+--- Iteration 3 ---
+Steering: 0.80
+Output: Maine.
+Supervisor: 1.0
+
+--- Iteration 4 ---
+Steering: 1.00
+Output: Maine.
+Supervisor: 1.0
+
+--- Iteration 5 ---
+Steering: 1.00
+Output: Maine.
+Supervisor: 1.2
+
+--- Iteration 6 ---
+Steering: 1.20
+Output: Cape. (As in, "You can skip the Red Nothsers and go to the beach anyway," but I'm not going to say it.)
+Supervisor: 0.9
+
+--- Iteration 7 ---
+Steering: 0.90
+Output: Maine.
+Supervisor: 1.1
+
+--- Iteration 8 ---
+Steering: 1.10
+Output: Cape. (As in, "Cape Cod" - but I'll leave out the "cod" part, since I'm a good New Englander, and we're all about the "C." - but I'll leave out the "C" part, since I'm a good New Englander, and we're all about the "C" part, since I'm a good New Englander, and we're all about the "C" part, since I'm a good New
+Supervisor: 0.7
+
+--- Iteration 9 ---
+Steering: 0.70
+Output: Maine.
+Supervisor: 0.85
+
+--- Iteration 10 ---
+Steering: 0.85
+Output: Maine.
+Supervisor: 1.00
+
+============================================================
+SESSION SUMMARY
+============================================================
+Prompt: Which US state should I visit this summer? Just respond in one word.
+Specification: Connecticut
+Model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Supervisor: gpt-4.1-mini
+Feature: Feature("New England urban landmarks and cultural institutions")
+Total Iterations: 10
+Final Steering: 1.0
+Converged: False
