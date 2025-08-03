@@ -7,10 +7,16 @@ Features are linear combinations of neurons (aka latent space directions) corres
 The problem is that finding the proper value to steer a model is delicate. 
 Too little steering often doesn't change a model's output; too much steering output gibberish.
 
-Here I propose a simple solution where a **supervisor model** (e.g. `gpt-4.1-mini`) evaluates the output of the steerable model compared to the desired behavior, and adjusts the steering value automatically.
+Here I propose a simple solution where a ***supervisor model*** (e.g. `gpt-4.1-mini`) evaluates the output of the steerable model compared to the desired behavior, and adjusts the steering value automatically.
 The feedback loop converges to the optimal steering value.
 
-Note: Goodfire has a AutoSteer function to find features and values for optimal steering, and it works very well. The supervisor loop is an exploratory alternative.
+### Usage
+
+` python loop.py --prompt "Which state should I visit this summer? One word only." --specification "Colorado"`
+
+### Note
+Goodfire has a `AutoSteer` function to find features and values for optimal steering, and it works very well. 
+The supervisor loop is an exploratory alternative.
 
 
 
