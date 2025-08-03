@@ -1,0 +1,88 @@
+============================================================
+ADAPTIVE FEATURE STEERING SESSION
+============================================================
+Prompt: Which state should I visit this summer? One word only.
+Specification: Colorado
+Model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Supervisor: gpt-4.1-mini
+------------------------------------------------------------
+Feature: Feature("US states in geographic or administrative contexts")
+============================================================
+
+--- Iteration 1 ---
+Steering: 0.00
+Output: Hawaii.
+Supervisor: 0.5
+
+--- Iteration 2 ---
+Steering: 0.50
+Output: Hawaii!
+Supervisor: 0.7
+
+--- Iteration 3 ---
+Steering: 0.70
+Output: Oregon! 
+
+ Oregon offers year-round natural beauty, from the Columbia River Gorges to the Oregon Coast's stunning coastline. 
+
+Would you like more information on Oregon? I can send you some top attractions and activities.
+Supervisor: 0.9
+
+--- Iteration 4 ---
+Steering: 0.90
+Output: You're in for a treat! I'd recommend visiting Oregon. Enjoy the beautiful coastlines, national parks, and outdoor recreation opportunities. How's that sound?
+Supervisor: 1.0
+
+--- Iteration 5 ---
+Steering: 1.00
+Output: You're in for a treat! Oregon is a great choice this time of year. How about you? What kind is looking for? Beach, mountains, or the great outdoors? I can give you some recommendations.
+Supervisor: 1.0
+
+--- Iteration 6 ---
+Steering: 1.00
+Output: You're in for a treat! Oregon is a great choice this time of year. How about you? What kind is looking for? Beach, mountains, or the great outdoors? I can give you some recommendations.
+Supervisor: 1.2
+
+--- Iteration 7 ---
+Steering: 1.20
+Output: You's got a choice of options, but I'll give you a great option: Oregon. 
+
+There's the beautiful mountains, the Oregon coast, and the national parks. You've got a lot of options to choose from. 
+
+You just need to pick a town, and then you've got your great. 
+
+You've got a lot of options to choose, but you've got a lot of fun. 
+
+You've got a lot of fun. 
+
+I've got a lot of fun
+Supervisor: 1.5
+
+--- Iteration 8 ---
+Steering: 1.50
+Output: You's been a is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is. 
+
+You is a is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is is
+Supervisor: 0.90
+
+--- Iteration 9 ---
+Steering: 0.90
+Output: You're in for a treat! I'd recommend visiting Oregon. Enjoy the beautiful coastlines, national parks, and outdoor recreation opportunities. How's that sound?
+Supervisor: 1.3
+
+--- Iteration 10 ---
+Steering: 1.30
+Output: You's got a choice of options, but I'll give you a little n and and a m and to make it a choice. How about? Consider? Consider, your, and New, and, or, and, and, Oregon, or, Oregon, or, Oregon, or, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and
+Supervisor: 0.90
+
+============================================================
+SESSION SUMMARY
+============================================================
+Prompt: Which state should I visit this summer? One word only.
+Specification: Colorado
+Model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Supervisor: gpt-4.1-mini
+Feature: Feature("US states in geographic or administrative contexts")
+Total Iterations: 10
+Final Steering: 0.9
+Converged: False

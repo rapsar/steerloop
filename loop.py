@@ -3,6 +3,7 @@ from goodfire import Variant
 import os
 import supervisor
 from openai import OpenAI
+import argparse
 
 def run_steering_loop(
     specification: str,
@@ -155,10 +156,28 @@ def _build_history_context(history):
 
 
 if __name__ == "__main__":
+    
+    parser = argparse.ArgumentParser(description="Run adaptive feature steering with supervisor feedback")
+    parser.add_argument("--prompt", "-p", help="The prompt to send to the model")
+    parser.add_argument("--specification", "-s", help="Target behavior specification for steering")
+    parser.add_argument("--model", default="meta-llama/Meta-Llama-3.1-8B-Instruct", 
+                       help="Model name (default: Meta-Llama-3.1-8B-Instruct)")
+    parser.add_argument("--max-iterations", type=int, default=10,
+                       help="Maximum iterations (default: 10)")
+    parser.add_argument("--initial-steering", type=float, default=0.0,
+                       help="Initial steering value (default: 0.0)")
+    parser.add_argument("--max-tokens", type=int, default=100,
+                       help="Max completion tokens (default: 100)")
+    
+    args = parser.parse_args()
+    
     result = run_steering_loop(
-        specification="Connecticut",
-        prompt="Which US state should I visit this summer? Just respond in one word.",
-        max_iterations=10
+        prompt=args.prompt,
+        specification=args.specification,
+        model_name=args.model,
+        max_iterations=args.max_iterations,
+        initial_steering=args.initial_steering,
+        max_tokens=args.max_tokens
     )
     
     print(f"\nCompleted with {result['session_info']['total_iterations']} iterations")

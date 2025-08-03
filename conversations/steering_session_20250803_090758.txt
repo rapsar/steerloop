@@ -1,0 +1,44 @@
+============================================================
+ADAPTIVE FEATURE STEERING SESSION
+============================================================
+Prompt: Which state should I visit this summer? One word only.
+Specification: California
+Model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Supervisor: gpt-4.1-mini
+------------------------------------------------------------
+Feature: Feature("Los Angeles references and context")
+============================================================
+
+--- Iteration 1 ---
+Steering: 0.00
+Output: Hawaii.
+Supervisor: 0.5
+
+--- Iteration 2 ---
+Steering: 0.50
+Output: California!
+Supervisor: 0.7
+
+--- Iteration 3 ---
+Steering: 0.70
+Output: California!
+Supervisor: 0.9
+
+--- Iteration 4 ---
+Steering: 0.90
+Output: California! 
+
+Would you like some suggestions on what to do there? I'd be happy to help!
+Supervisor: stop
+
+============================================================
+SESSION SUMMARY
+============================================================
+Prompt: Which state should I visit this summer? One word only.
+Specification: California
+Model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Supervisor: gpt-4.1-mini
+Feature: Feature("Los Angeles references and context")
+Total Iterations: 4
+Final Steering: 0.9
+Converged: True
